@@ -16,4 +16,5 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 COPY --from=builder /go/src/github.com/bottalk/bottalk-proxy-plugin/plugin .
 
+EXPOSE 9080/tcp
 ENTRYPOINT ["./plugin"]
